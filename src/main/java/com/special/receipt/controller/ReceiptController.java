@@ -24,7 +24,7 @@ public class ReceiptController {
     @PostMapping("/order")
     public String order(ReceiptForm receiptForm) {
         receiptService.order(receiptForm);
-        return "redirect:/receipt/menu";
+        return "result";
     }
     @GetMapping("/result")
     public String result() {
