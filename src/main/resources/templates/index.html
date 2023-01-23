@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>잔소리 영수증</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/animation.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body class="text-center" style="font-family: 'Noto Sans KR', sans-serif;">
+    <div>
+        <form method="post">
+            <section id="main" style="padding-top: 96px;">
+                <nav>
+                    <div style="font-size:40px; font-weight: bold; line-height: 25px; text-align: center; height: 80px;">
+                        <p>잔소리</p>
+                        <p>영수증</p>
+                    </div>
+                </nav>
+                <br>
+                <div>
+                    그동안 무료로 이용되었던 저의 걱정은<br>
+                    올해부터 유료로 전환됩니다🥰
+                </div>
+                <div class="info">
+                    <div>
+                        <input type="text" class="text-field" id="fromName" name="fromName" placeholder="내 이름">
+                    </div>
+                    <div>
+                        <input type="text" class="text-field" id="toName" name="toName" placeholder="보낼 사람 이름">
+                    </div>
+                </div>
+                <div>
+                    <button type="button" class="click" style="background-color: #F5D042;" onclick="js:order()">주문하기</button>
+                </div>
+            </section>
+            <section id="qna">
+                <nav>
+                    <div id="second-title">
+                        <p>잔소리 영수증</p>
+                    </div>
+                </nav>
+                <p style="font-weight: 700; font-size: 24px; padding-top: 30px">- 메 뉴 판 -</p>
+                <br>
+                <table id="dontLikeInfo">
+                    <tbody id="btn-check-2">
+                        <tr>
+                            <td class="menu">
+                                <p>살 많이 쪘네. 이제 관리도 해야지?</p>
+                            </td>
+                            <td class="money">
+                                <p>30,000원</p>
+                            </td>
+                            <td>
+                                <input type="button" class="btn" value="담기">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="menu">
+                                <p>어릴 때는 예뻤는데,,,,</p>
+                            </td>
+                            <td class="money">
+                                <p>30,000원</p>
+                            </td>
+                            <td>
+                                <input type="button" class="btn" value="담기">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="menu">
+                                <p>시험은 잘 봤니?</p>
+                            </td>
+                            <td class="money">
+                                <p>30,000원</p>
+                            </td>
+                            <td>
+                                <input type="button" class="btn" value="담기">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="menu">
+                                <p>대학은 어디 갈거니??</p>
+                            </td>
+                            <td class="money">
+                                <p>50,000원</p>
+                            </td>
+                            <td>
+                                <input type="button" class="btn" value="담기">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="menu">
+                                <p>군대는 언제 가니?</p>
+                            </td>
+                            <td class="money">
+                                <p>50,000원</p>
+                            </td>
+                            <td>
+                                <input type="button" class="btn" value="담기">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="menu">
+                                <p>졸업하고 뭐할거니?</p>
+                            </td>
+                            <td class="money">
+                                <p>50,000원</p>
+                            </td>
+                            <td>
+                                <input type="button" class="btn" value="담기">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="menu">
+                                <p>취업은 언제하니?</p>
+                            </td>
+                            <td class="money">
+                                <p>100,000원</p>
+                            </td>
+                            <td>
+                                <input type="button" class="btn" value="담기">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="menu">
+                                <p>연봉은 얼마니?</p>
+                            </td>
+                            <td class="money">
+                                <p>100,000원</p>
+                            </td>
+                            <td>
+                                <input type="button" class="btn" value="담기">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="menu">
+                                <p>그 회사 계속 다닐 거니?</p>
+                            </td>
+                            <td class="money">
+                                <p>100,000원</p>
+                            </td>
+                            <td>
+                                <input type="button" class="btn" value="담기">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="menu">
+                                <p>대기업 가야지?</p>
+                            </td>
+                            <td class="money">
+                                <p>150,000원</p>
+                            </td>
+                            <td>
+                                <input type="button" class="btn" value="담기">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="menu">
+                                <p>연애는 안하니?</p>
+                            </td>
+                            <td class="money">
+                                <p>150,000원</p>
+                            </td>
+                            <td>
+                                <input type="button" class="btn" value="담기">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="menu">
+                                <p>결혼은 안하니?</p>
+                            </td>
+                            <td class="money">
+                                <p>150,000원</p>
+                            </td>
+                            <td>
+                                <input type="button" class="btn" value="담기">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br>
+                <button type="button" id="complete" class="click" style="background-color: #F5D042">계산하기</button>
+            </section>
+        </form>
+    </div>
+
+    <footer style="background-color: #0A174E; color: white;">
+        <div class="container text-center text-md-start mt-5">
+            <div class="row mt-1">
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-3">
+                </div>
+                <p style="text-align: center;">
+                    insta@project.silo
+                </p>
+            </div>
+        </div>
+    </footer>
+    <script src="/js/style.js" charset="utf-8"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script>
+        var menus = [];
+        var moneys = [];
+        $(function() {
+            $('.btn').click( function() {
+                const checkBtn = $(this);
+
+                const tr = checkBtn.parent().parent();
+                const td = tr.children();
+
+                const menu = td.eq(0).text();
+                const temp = td.eq(1).text().split(",");
+                const money = temp[0] + temp[1].substring(0, 3);
+
+                if( $(this).val() === '담기' ) {
+                    $(this).val('빼기');
+                    $(this).css("background-color", "#E0E0E0");
+                    $(this).css("color", "#0A174E");
+
+                    menus.push(menu);
+                    moneys.push(money);
+                }
+                else {
+                    $(this).val('담기');
+                    $(this).css("background-color", "#0A174E");
+                    $(this).css("color", "white");
+
+                    const idx1 = menus.indexOf(menu);
+                    const idx2 = moneys.indexOf(money);
+
+                    if (idx1 > -1) {
+                        menus.splice(idx1, 1);
+                    }
+
+                    if (idx2 > -1) {
+                        moneys.splice(idx2, 1);
+                    }
+                }
+            });
+        });
+
+        $(document).ready(function () {
+            $("#complete").click(function () {
+                var receiptMenu = {
+                    "fromName" : $("#fromName").val(),
+                    "toName" : $("#toName").val(),
+                    "menu" : menus,
+                    "money" : moneys
+                };
+                $.ajax({
+                    url : "/receipt/order",
+                    dataType : "json",
+                    contentType : "application/x-www-form-urlencoded; charset=UTF-8",
+                    type : "POST",
+                    data : receiptMenu,
+                }).done(function (result) {
+                    console.log(result);
+                    location.href = "/receipt/result/" + $("#fromName").val() + "&" + $("#toName").val();
+                }).fail(function () {
+                    location.href = "/receipt/result/" + $("#fromName").val() + "&" + $("#toName").val();
+                });
+            })
+        });
+    </script>
+</body>
+</html>
