@@ -1,6 +1,5 @@
 package com.special.receipt.domain;
 
-import com.special.receipt.model.ReceiptMenuForm;
 import lombok.*;
 
 import javax.persistence.*;
@@ -23,10 +22,17 @@ public class ReceiptMenu {
     @Column
     private Long money;
 
-    public static ReceiptMenu of(ReceiptMenuForm form) {
+    private String fromName;
+
+    private String toName;
+
+
+    public static ReceiptMenu of(String menu, Long money, String fromName, String toName) {
         return ReceiptMenu.builder()
-                .menu(form.getMenu())
-                .money(form.getMoney())
+                .menu(menu)
+                .money(money)
+                .fromName(fromName)
+                .toName(toName)
                 .build();
     }
 }

@@ -1,19 +1,18 @@
 package com.special.receipt.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import java.util.List;
 
 @Getter
 @Setter
+@NoArgsConstructor
 @AllArgsConstructor
 @Builder
 public class ReceiptForm {
 
     private String fromName;
     private String toName;
-    private List<ReceiptMenuForm> receiptMenuList;
+    private List<String> menu;
+    private List<String> money;
 }
