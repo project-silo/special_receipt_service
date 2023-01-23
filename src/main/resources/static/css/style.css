@@ -1,0 +1,68 @@
+.text-field {
+    font-size: 14px;
+    margin-bottom: 10px;
+    border: 1px solid #DDE2E5;
+    border-radius: 8px;
+    outline: black;
+    padding: 10px;
+    width: 100%;
+}
+
+.info {
+    width: 350px;
+    border: 0;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.click {
+    height: 56px;
+    width: 150px;
+    border: none;
+    border-radius: 32px;
+    font-weight: 600;
+}
+
+#qna {
+    display: none;
+}
+
+#second-title {
+    box-shadow: 0px 4px 4px -4px rgba(0, 0, 0, 0.25);
+    font-size:18px;
+    font-weight: 500;
+    line-height: 25px;
+    text-align: center;
+    padding-top: 19px;
+    padding-bottom: 15px;
+}
+
+#btn-check-2 tr td label {
+    background-color: #0A174E;
+}
+
+.btn {
+    background-color: #0A174E;
+    color: white;
+    text-align: center;
+}
+
+.menu {
+    text-align: left;
+}
+
+.menu div {
+    line-height: 25px;
+}
+
+.money p {
+    text-align: center;
+}
+
+#dontLikeInfo {
+    width:90%;
+    height: 100px;
+    margin-left:5%;
+    margin-right: 5%;
+}
