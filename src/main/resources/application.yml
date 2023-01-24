@@ -1,0 +1,22 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: ENC(yylW6MtldtFZmrJGYo4uyAx9OsOB5p907h9U9joZqVOZlmO6g7XaM8ZeImHPb/Lj)
+    username: ENC(bD06ooAzggxTOiSGFUdq2w==)
+    password: ENC(zrRv44cWLQ0TgVxQ1YYr3Q==)
+  jpa:
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  devtools:
+    livereload:
+      enabled: true
+    remote:
+      restart:
+        enabled: true
+jasypt:
+  encryptor:
+    bean: jasyptStringEncryptor
