@@ -1,9 +1,12 @@
 package com.special.receipt.service;
 
+import com.special.receipt.domain.LifeQuotes;
 import com.special.receipt.domain.Receipt;
 import com.special.receipt.domain.ReceiptMenu;
+import com.special.receipt.dto.LifeQuotesDto;
 import com.special.receipt.dto.ReceiptDto;
 import com.special.receipt.model.ReceiptForm;
+import com.special.receipt.repository.LifeQuotesRepository;
 import com.special.receipt.repository.ReceiptRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -20,6 +23,7 @@ import java.util.Optional;
 public class ReceiptService {
 
     private final ReceiptRepository receiptRepository;
+    private final LifeQuotesRepository lifeQuotesRepository;
 
     @Transactional
     public void order(ReceiptForm receiptForm) {
@@ -48,5 +52,19 @@ public class ReceiptService {
         }
 
         return result;
+    }
+
+    public LifeQuotesDto getLifeQuote() {
+        long num = (long)(Math.random() * 50 + 1);
+        Optional<LifeQuotes> lifeQuotes = lifeQuotesRepository.findById(num);
+        if (lifeQuotes.isEmpty()) {
+            return null;
+        }
+        LifeQuotes lifeQuote = lifeQuotes.get();
+
+        return LifeQuotesDto.builder()
+                .lifeQuote(lifeQuote.getLifeQuote())
+                .name("-" + lifeQuote.getName())
+                .build();
     }
 }

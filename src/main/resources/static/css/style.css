@@ -66,3 +66,13 @@
     margin-left:5%;
     margin-right: 5%;
 }
+
+#lifeQuote {
+    width:80%;
+    height:188px;
+    margin-left:10%;
+    margin-right: 10%;
+    text-align: left;
+    background: rgba(224, 224, 224, 0.5);
+    border-radius: 4px;
+}

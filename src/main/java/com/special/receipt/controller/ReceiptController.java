@@ -1,5 +1,6 @@
 package com.special.receipt.controller;
 
+import com.special.receipt.dto.LifeQuotesDto;
 import com.special.receipt.dto.ReceiptDto;
 import com.special.receipt.model.ReceiptForm;
 import com.special.receipt.service.ReceiptService;
@@ -46,13 +47,20 @@ public class ReceiptController {
                          @PathVariable String fromName,
                          @PathVariable String toName) {
         List<ReceiptDto> receipt = receiptService.getReceipt(fromName, toName);
-
         if (receipt == null) {
             return "error";
         }
+
+        LifeQuotesDto lifeQuote = receiptService.getLifeQuote();
+        if (lifeQuote == null) {
+            return "error";
+        }
+
         model.addAttribute("fromName", fromName);
         model.addAttribute("toName", toName);
         model.addAttribute("receiptList", receipt);
+        model.addAttribute("lifeQuote", lifeQuote);
+
         return "result";
     }
 }
