@@ -20,7 +20,7 @@
             <p> 청구할 잔소리 요금은</p>
         </div>
         <br>
-        <table id="dontLikeInfo">
+        <table style="width:80%; height: 100px; margin-left:10%; margin-right: 10%;">
             <tbody id="btn-check-2">
             <tr th:each="receipt : ${receiptList}">
                 <td style="text-align: left" th:text="${receipt.menu}"></td>
@@ -28,8 +28,8 @@
             </tr>
             </tbody>
         </table>
-        <hr style="width:90%; margin-right: 5%; margin-left: 5%; border: 1px solid black;">
-        <table style="width:90%; margin-left:5%; margin-right: 5%">
+        <hr style="width:80%; margin-right: 10%; margin-left: 10%; border: 1px solid black;">
+        <table style="width:80%; margin-left: 10%; margin-right: 10%">
             <tbody>
             <tr>
                 <td style="text-align: left">총 금액은
@@ -41,7 +41,13 @@
         <br>
         <div>
             <a class="btn btn-dark" style="border-radius: 32px; background-color: #0A174E; color: #F5D042; height: 56px; width: 150px; line-height: 40px; font-weight: 600;" href="/receipt/order">다시하기</a>
-            <button class="click" style="background-color: #F5D042" type="button">공유하기</button>
+            <button class="click" style="background-color: #F5D042" type="button" onclick="js:copy()">공유하기</button>
+        </div>
+        <br>
+        <div id="lifeQuote">
+            <p style="font-weight: bold">💊오늘의 처방전</p>
+            <p th:text="${lifeQuote.lifeQuote}"></p>
+            <p th:text="${lifeQuote.name}"></p>
         </div>
     </div>
 
