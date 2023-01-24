@@ -33,3 +33,10 @@ dependencies {
 tasks.named('test') {
     useJUnitPlatform()
 }
+
+bootJar{
+    destinationDirectory = file("./target")
+    archivesBaseName = 'special-receipt'
+    archiveFileName = 'special-receipt.jar'
+    archiveVersion = "0.0.1"
+}
